@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 200vh; /* Ensure the page is tall enough to scroll */
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #FDF6EC; /* Light Beige Background */
+}
+
+body::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely within the body */
+    top: 0; /* Start from the very top of the body */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Make the pseudo-element cover the whole body */
+    background: url('Wallpaper.png') no-repeat center center;
+    background-size: auto; 
+    z-index: -1; /* Make sure it's behind all content */
+    padding-top: 70%; }
+
+
+
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2C684B; /* Deep Green */
+    color: white;
+}
+
+.header .logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.cta-button {
+    background-color: #C62828; /* Red Button */
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 30px;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.description {
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+/* Calendar Section */
+.calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 windows per row */
+    gap: 10px;
+    padding: 20px;
+}
+
+.window {
+    background-color: #EDEDED;
+    border: 2px solid #CCC;
+    text-align: center;
+    padding: 20px;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50; /* Green for numbers */
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.window a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.window a:hover {
+    text-decoration: underline;
+    color: #276221;
+}
+
+
+/* Add hover effect for windows */
+.window:hover {
+    background-color: #C62828; /* Yellow on hover */
+    transform: scale(1.05);
+    transition: all 0.2s ease-in;
+}
