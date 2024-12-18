@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elfify - Festive Footsteps</title>
+    <!-- Google Fonts for "Montserrat" -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="volunteer.css">
+    <script src="signUpfn.js"></script>">
+
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="/main/main.htmls">
+            <img src="elfifylogo.png" alt="Elfify Logo" style="width: 262px; height: auto;">
+        </a>
+        <nav class="nav-links">
+            <a href="#">Our Identity</a>
+            <a href="#">Our Strengths</a>
+            <a href="#">Our Mission</a>
+            <a href="#">Our History</a>
+        </nav>
+        <a href="volunteerSignup.html" class="cta-button">Volunteer With Us!</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="volunteerBanner.png" alt="Volunteer Banner">
+    </section>
+
+    <div class="desc">
+            <p> If you are inspired to be apart of something bigger and contribute on a larger platform, join the Elfify Family today! As a 
+                <br> volunteer, you can fulfil many roles such as event planning and execution, outreach, befriending, publicity and 
+                <br> marketing, and so much more! Simply sign up and indicate your interests.
+
+            </p>
+
+    </div>
+
+    <div>
+    <!-- Volunteer Application Form -->
+
+    <div class="form-header"> Sign Up As a Volunteer</div>
+
+     <form class="form-container" action="signupDone.html" onsubmit="return validateForm()">
+        <div class="form-bg"></div>
+        
+        <label> Full Name (As Per NRIC) </label> <br>
+        <input type="text" id="name" name="name" placeholder="E.g. John Tan Ming En" required> <br>
+      
+
+        
+        <label> Email </label> <br>
+        <input type="email" id="email" name="email" placeholder="E.g. Johntan@examplemail.com" required> <br>
+        
+        
+       
+        <label> Birthday </label> <br>
+        <input type="date" id="birthdate" name="birthdate" required> <br>
+         
+
+        
+        <label> Occupation </label> <br>
+        <input type="occupation" id="occupation" name="occupation" placeholder="E.g. Student" required> <br>
+        
+        
+        
+        <label> Interests & Skills </label> <br>
+        <input type="text" id="interests" name="interests" placeholder="E.g. Photography, Emceeing" required> <br>
+        
+
+       
+        <label> Commitment Period </label> <br>
+        <input type="text" id="commit" name="commit" placeholder="E.g. Once a month" required> <br>
+    
+
+        <input type="submit" id="submitForm" name="submitForm" value="Submit Form" onclick="GetInfo()" required> <br>
+
+     </form>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
