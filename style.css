@@ -11,8 +11,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     min-height: 200vh; /* Ensure the page is tall enough to scroll */
     position: relative;
     overflow-x: hidden; /* Prevent horizontal scroll */
@@ -20,16 +18,16 @@ body {
 }
 
 body::before {
-    content: ''; /* Required for pseudo-elements */
-    position: absolute; /* Position it absolutely within the body */
-    top: 0; /* Start from the very top of the body */
+    content: '';
+    position: absolute;
     left: 0;
     width: 100%;
-    height: 100%; /* Make the pseudo-element cover the whole body */
+    height: 100%;
+    transform: translateY(25%);
     background: url('Wallpaper.png') no-repeat center center;
-    background-size: auto; 
-    z-index: -1; /* Make sure it's behind all content */
-    padding-top: 70%; }
+    background-size: contain;
+    z-index: -1;
+}
 
 /* Header Styles */
 .header {
@@ -63,6 +61,8 @@ body::before {
 
 /* Hero Section */
 .hero {
+    position: relative; /* Fixes the image position within its section */
+    z-index: 0; 
     text-align: center;
     padding: 30px;
 }
@@ -73,38 +73,77 @@ body::before {
     object-fit: cover;
 }
 
-.hero-text h1 {
+.hero h1 {
     font-size: 3rem;
     margin: 20px 0;
 }
 
 .description {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 10px auto;
 }
 
-/* Calendar Section */
-.calendar-container {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 windows per row */
-    gap: 10px;
-    padding: 20px;
-}
-
-.window {
-    background-color: #EDEDED;
-    border: 2px solid #CCC;
-    text-align: center;
-    padding: 20px;
-
-    font-size: 24px;
-    font-weight: bold;
-    color: #4CAF50; /* Green for numbers */
+/* Calendar */
+.calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    gap: 100px; 
+    margin-top: 50px;
 }
 
+.calendar-container {
+    top: 270px;
+    position: relative;
+    height: auto;
+    z-index: 1;
+}
+
+.grid {
+    display: grid;
+    justify-items: center;
+}
+
+.grid1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    transform: translateY(-100px);
+}
+
+.grid2 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px 91px; /* Vertical and horizontal spacing */
+}
+
+.grid3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 150px;
+    transform: translateY(100px);
+}
+
+/* Calendar Windows */
+.window {
+    background-color: #d84949;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.window:hover {
+    background-color: #2C684B;
+    transform: scale(1.05);
+}
 
 .popup {
     display: none; /* Hidden by default */
@@ -149,12 +188,4 @@ body::before {
     padding: 5px 10px;
     cursor: pointer;
     display: inline-block;
-}
-
-
-/* Add hover effect for windows */
-.window:hover {
-    background-color: #C62828; /* Yellow on hover */
-    transform: scale(1.05);
-    transition: all 0.2s ease-in;
 }
