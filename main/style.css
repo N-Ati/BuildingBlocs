@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -51,7 +52,7 @@ body::before {
     color: white;
     text-decoration: none;
     margin: 0 15px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cta-button {
@@ -67,7 +68,13 @@ body::before {
     position: relative; /* Fixes the image position within its section */
     z-index: 0; 
     text-align: center;
-    padding: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 10px auto;
+    font-weight: 600px;
+    font-size:larger;
+    font-family:'Red Hat Display', sans-serif;
+    color: black;
 }
 
 .hero img {

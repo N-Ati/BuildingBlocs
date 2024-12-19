@@ -14,7 +14,7 @@
 <body>
     <!-- Header Section -->
     <header class="header">
-        <a href="/main/main.htmls">
+        <a href="/main/main.html">
             <img src="/main/elfifylogo.png" alt="Elfify Logo" style="width: 262px; height: auto;">
         </a>
         <nav class="nav-links">
@@ -40,49 +40,40 @@
 
     </div>
 
-    <div>
+<div>
     <!-- Volunteer Application Form -->
 
-    <div class="form-header"> Sign Up As a Volunteer</div>
-
-     <form class="form-container" action="signupDone.html" onsubmit="return validateForm()">
-        <div class="form-bg"></div>
-        
-        <label> Full Name (As Per NRIC) </label> <br>
-        <input type="text" id="name" name="name" placeholder="E.g. John Tan Ming En" required> <br>
-      
-
-        
-        <label> Email </label> <br>
-        <input type="email" id="email" name="email" placeholder="E.g. Johntan@examplemail.com" required> <br>
-        
-        
-       
-        <label> Birthday </label> <br>
-        <input type="date" id="birthdate" name="birthdate" required> <br>
-         
-
-        
-        <label> Occupation </label> <br>
-        <input type="occupation" id="occupation" name="occupation" placeholder="E.g. Student" required> <br>
-        
-        
-        
-        <label> Interests & Skills </label> <br>
-        <input type="text" id="interests" name="interests" placeholder="E.g. Photography, Emceeing" required> <br>
-        
-
-       
-        <label> Commitment Period </label> <br>
-        <input type="text" id="commit" name="commit" placeholder="E.g. Once a month" required> <br>
-    
-
-        <input type="submit" id="submitForm" name="submitForm" value="Submit Form" onclick="GetInfo()" required> <br>
-
-     </form>
-        </div>
-
+    <div class="form-header"> 
+        Sign Up As a Volunteer
     </div>
+
+        <form class="form-container" action="signupDone.html" onsubmit="return validateForm()">
+            <div class="form-bg"></div>
+        
+            <label> Full Name (As Per NRIC) </label> <br>
+            <input type="text" id="name" name="name" placeholder="E.g. John Tan Ming En" required> <br>
+      
+            <label> Email </label> <br>
+            <input type="email" id="email" name="email" placeholder="E.g. Johntan@examplemail.com" required> <br>
+        
+            <label> Birthday </label> <br>
+            <input type="date" id="birth" name="birth" required> <br>
+         
+            <label> Occupation </label> <br>
+            <input type="occupation" id="job" name="occupation" placeholder="E.g. Student" required> <br>
+        
+            <label> Interests & Skills </label> <br>
+            <input type="text" id="int" name="interests" placeholder="E.g. Photography, Emceeing" required> <br>
+       
+            <label> Commitment Period </label> <br>
+            <input type="text" id="commit" name="commit" placeholder="E.g. Once a month" required> <br>
+    
+            <input type="submit" id="submitForm" name="submitForm" value="Submit Form" onclick="GetInfo()" required> <br>
+
+        </form>
+        
+
+</div>
 
 
 </body>
