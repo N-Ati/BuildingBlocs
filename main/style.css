@@ -26,8 +26,9 @@ body::before {
     height: 100%;
     transform: translateY(25%);
     background: url('Wallpaper.png') no-repeat center center;
-    background-size: contain;
+    background-size: cover;
     z-index: -1;
+    padding-top: 400px
 }
 
 
@@ -179,4 +180,31 @@ body::before {
 .window a:hover {
     text-decoration: underline;
     color: #276221;
+}
+
+.background-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the images are in the background */
+}
+
+.background-deco {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust to cover the whole background */
+}
+
+.house-image {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 100%; /* Makes the image stretch across the entire width of the screen */
+    height: auto; /* Adjust height proportionally */
+    min-height: 100vh; /* Ensures the image covers at least the full viewport height */
+    object-fit: cover; /* Ensures the image fills the container while preserving its aspect ratio */
+    z-index: -1; /* Keep the house in the background */
 }
