@@ -215,6 +215,12 @@ body::before {
     padding-right: 30px;
 }
 
+.d10Image{
+    padding-top:38px;
+    padding-right: 45px;
+    height:390px;
+}
+
 
 /* Green donate button */
 .donate-button-green{
