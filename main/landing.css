@@ -1,0 +1,29 @@
+/* Fullscreen styling for landing page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDF6EC; /* Light Beige background */
+    transition: opacity 1s ease-out; /* Transition for fade-out effect */
+}
+
+/* Styling for the landing image to fill the screen */
+.landing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire screen without stretching */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Make sure it's behind the circle */
+}
+
+/* Fade-out effect */
+.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction with the page during the fade-out */
+}
