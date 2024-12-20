@@ -16,6 +16,17 @@ body {
     position: relative;
     overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: #FDF6EC; /* Light Beige Background */
+    opacity: 1;
+    transition: opacity 1.0s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Duration can be adjusted */
+}
+
+body.loaded {
+    opacity:1;
 }
 
 body::before {
@@ -108,6 +119,7 @@ body::before {
     color: #4CAF50;
     font-weight: bold;
 }
+
 .calendar-container {
     top: 150px;
     position: relative;
@@ -169,6 +181,7 @@ body::before {
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
 
 #day23 {
     position: absolute;

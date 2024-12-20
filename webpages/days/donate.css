@@ -19,6 +19,17 @@ body {
     position: relative;
     overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: #FDF6EC; /* Light Beige Background */
+    opacity: 1;
+    transition: opacity 1.0s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Duration can be adjusted */
+}
+
+body.loaded {
+    opacity:1;
 }
 
 body::before {

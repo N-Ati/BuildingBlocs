@@ -43,7 +43,7 @@
             </div>
 
             <div class ="right-body">
-            <img src="/src/d2Image.png" alt="d1Image" class="d2Image">
+            <img src="/src/d4Image.png" alt="d1Image" class="d2Image">
 
             <p class="description"> Do some festive cleaning and bless others at the same time! <br>
                 We invite you to clear out your homes and closets to select <br>
@@ -60,6 +60,29 @@
             </div>
 
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const links = document.querySelectorAll('a');
+        
+                links.forEach(link => {
+                    link.addEventListener('click', function (event) {
+                        const href = this.getAttribute('href');
+        
+                        // Ensure the href is valid and not an anchor link (e.g., #something)
+                        if (href && !href.startsWith('#')) {
+                            event.preventDefault(); // Prevent the immediate navigation
+                            document.body.classList.add('fade-out'); // Trigger the fade-out
+        
+                            // Wait for the fade-out to complete (500ms) before navigating to the new page
+                            setTimeout(() => {
+                                window.location.href = href;
+                            }, 500); // Adjust the delay here (must match the duration of fade-out)
+                        }
+                    });
+                });
+            });
+        </script>
 
     </section>
 

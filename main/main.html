@@ -51,28 +51,67 @@
         <div class="calendar-container">
             <img src="House2.png" alt="House" class="house-image">
             <div class="grid grid1">
+            <a href="/webpages/days/d1.html">
                 <div class="window">1</div>
+            </a>
+
+            <a href="/webpages/days/d2.html">
                 <div class="window">2</div>
+            </a>
             </div>
             <div class="grid grid2">
                 <!-- Days 3 to 22 -->
-                <div class="window">3</div> <div class="window">4</div>
-                <div class="window">5</div> <div class="window">6</div>
-                <div class="window">7</div> <div class="window">8</div>
-                <div class="window">9</div> <div class="window">10</div>
-                <div class="window">11</div> <div class="window">12</div>
-                <div class="window">13</div> <div class="window">14</div>
-                <div class="window">15</div> <div class="window">16</div>
-                <div class="window">17</div> <div class="window">18</div>
-                <div class="window">19</div> <div class="window">20</div>
-                <div class="window">21</div> <div class="window">22</div>
+                <a href="/webpages/days/d3.html"><div class="window">3</div></a>
+                <a href="/webpages/days/d4.html"><div class="window">4</div></a>
+                <a href="/webpages/days/d5.html"><div class="window">5</div></a>
+                <a href="/webpages/days/d6.html"><div class="window">6</div></a>
+                <a href="/webpages/days/d7.html"><div class="window">7</div></a>
+                <a href="/webpages/days/d8.html"><div class="window">8</div></a>
+                <a href="/webpages/days/d9.html"><div class="window">9</div></a>
+                <a href="/webpages/days/d10.html"><div class="window">10</div></a>
+                <a href="/webpages/days/d11.html"><div class="window">11</div></a>
+                <a href="/webpages/days/d12.html"><div class="window">12</div></a>
+                <a href="/webpages/days/d13.html"><div class="window">13</div></a>
+                <a href="/webpages/days/d14.html"><div class="window">14</div></a>
+                <a href="/webpages/days/d15.html"><div class="window">15</div></a>
+                <a href="/webpages/days/d16.html"><div class="window">16</div></a>
+                <a href="/webpages/days/d17.html"><div class="window">17</div></a>
+                <a href="/webpages/days/d18.html"><div class="window">18</div></a>
+                <a href="/webpages/days/d19.html"><div class="window">19</div></a>
+                <a href="/webpages/days/d20.html"><div class="window">20</div></a>
+                <a href="/webpages/days/d21.html"><div class="window">21</div></a>
+                <a href="/webpages/days/d22.html"><div class="window">22</div></a>
             </div>
-                <div class="window" id="day23">23</div>
-                <div class="window" id="day24">24</div>
-                <div class="window" id="day25">25</div>
+                <a href="/webpages/days/d23.html"><div class="window" id="day23">23</div></a>
+                <a href="/webpages/days/d24.html"><div class="window" id="day24">24</div></a>
+                <a href="/webpages/days/d25.html"><div class="window" id="day25">25</div></a>
         </div>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('a');
+    
+            links.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    const href = this.getAttribute('href');
+    
+                    // Ensure the href is valid and not an anchor link (e.g., #something)
+                    if (href && !href.startsWith('#')) {
+                        event.preventDefault(); // Prevent the immediate navigation
+                        document.body.classList.add('fade-out'); // Trigger the fade-out
+    
+                        // Wait for the fade-out to complete (500ms) before navigating to the new page
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 500); // Adjust the delay here (must match the duration of fade-out)
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
 </body>
 </html>
-
 <!--comment-->
