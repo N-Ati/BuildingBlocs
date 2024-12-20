@@ -75,7 +75,7 @@ body::before {
     font-weight: 600px;
     font-size:larger;
     font-family:'Red Hat Display', sans-serif;
-    color: black;
+    color: #333;
 }
 
 .hero img {
@@ -90,8 +90,8 @@ body::before {
 }
 
 .description {
-    max-width: 1000px;
-    margin: 10px auto;
+    max-width: 1500px;
+    margin: 10px;
 }
 
 /* Calendar */
@@ -101,8 +101,6 @@ body::before {
     align-items: center;
     flex-direction: column;
     position: relative;
-    gap: 100px; 
-    margin-top: 50px;
 }
 
 .window a {
@@ -111,9 +109,11 @@ body::before {
     font-weight: bold;
 }
 .calendar-container {
-    top: 270px;
+    top: 150px;
     position: relative;
-    height: auto;
+    height: 1350px;
+    width:1200px;
+    margin: 0 auto;
     z-index: 1;
 }
 
@@ -123,20 +123,32 @@ body::before {
 }
 
 .grid1 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 100px;
-    transform: translateY(-100px);
+    display: grid;
+    grid-template-columns: auto auto; /* Columns adjust to content width */
+    gap: 95px; /* No gap between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    width: fit-content; /* The grid only takes up as much space as needed for the buttons */
+    margin: 0 auto; /* Center the grid within the calendar container */
+    transform: translateY(125px); /* Keep vertical positioning */
 }
 
 .grid2 {
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 50px 91px; /* Vertical and horizontal spacing */
+    gap: 145px 140px; /* Vertical and horizontal spacing */
+    justify-content: center; /* Center the buttons horizontally */
+    width: fit-content; /* The grid only takes up as much space as needed for the buttons */
+    margin: 0 auto; /* Center the grid within the calendar container */
+    transform: translateY(275px);
 }
 
 .grid3 {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px 150px;
-    transform: translateY(100px);
+    gap: 100px 300px;
+    justify-content: center; /* Center the buttons horizontally */
+    width: fit-content; /* The grid only takes up as much space as needed for the buttons */
+    margin: 0 auto; /* Center the grid within the calendar container */
+    transform: translateY(450px);
 }
 
 /* Calendar Windows */
@@ -145,15 +157,35 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    margin:0;
+    padding: 0;
+    width: 80px; /* Adjust button width */
+    height: 80px; /* Adjust button height */
     border-radius: 50%;
-    font-size: 35px;
+    font-size: 25px; /* Adjust text size inside the button */
     font-weight: bold;
     color: #ffffff;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#day23 {
+    position: absolute;
+    top: 1285px; /* Adjust this to set vertical position */
+    left: 165px; /* Adjust this to set horizontal position */
+}
+
+#day24 {
+    position: absolute;
+    top: 1285px; /* Adjust this to set vertical position */
+    left: 470px; /* Adjust this to set horizontal position */
+}
+
+#day25 {
+    position: absolute;
+    top: 1285px; /* Adjust this to set vertical position */
+    left: 850px; /* Adjust this to set horizontal position */
 }
 
 .window:hover {
