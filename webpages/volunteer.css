@@ -132,7 +132,7 @@ body::before {
 .form-container{
     display: flexbox;
     max-width: 864px;
-    max-height: 950px;
+    max-height: 1200px;
     margin: auto;
     background-color: white;
     padding: 45px;
